@@ -1,0 +1,79 @@
+% Assignment 1 - My first LaTeX document
+% Tarun Konde (2025UCP1811)
+%
+% Changes made over the starter file:
+%   - font size changed to 12pt and paper size set to a4 (default is letter)
+%   - table of contents added
+%   - an extra section and a subsection added
+%   - numbered list
+%   - "Science!" section with inline math
+%   - natbib citation using physics.bib with the agu style
+%   - labels and cross-references
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{natbib}
+
+\title{My First \LaTeX{} Document}
+\author{Tarun Konde \\ 2025UCP1811}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Introduction}\label{sec:intro}
+
+This is my first document written in \LaTeX. Unlike a word processor, I write
+plain text with commands and the compiler decides the layout.
+
+Extra    spaces between words     are ignored. A single line break is also
+ignored, so this line joins the previous one.
+
+A blank line starts a new paragraph, like this one.
+
+Some characters are reserved and have to be escaped to print them:
+\# \$ \% \& \_ \{ \}. The backslash itself is printed with
+\verb|\textbackslash|, which gives \textbackslash.
+
+\subsection{Quotes and dashes}
+
+Opening quotes are typed with backticks: ``double'' and `single'.
+There are three kinds of dashes: a hyphen (well-known), an en dash
+for ranges (pages 10--20) and an em dash for a break in a sentence---like this.
+
+\section{Why I am learning \LaTeX}\label{sec:why}
+
+\begin{enumerate}
+    \item It handles equations far better than a word processor.
+    \item Numbering of sections, figures and references is automatic.
+    \item The source is plain text, so it works well with Git.
+\end{enumerate}
+
+Section~\ref{sec:intro} covered the basic rules of whitespace and special
+characters.
+
+\section{Science!}\label{sec:science}
+
+In 1905 Einstein showed that mass and energy are equivalent, which is written
+as $e = mc^2$ \citep{einstein1905}. Here $e$ is energy, $m$ is mass and $c$
+is the speed of light in vacuum.
+
+The same equation in display mode with a number:
+\begin{equation}\label{eq:massenergy}
+    e = mc^2
+\end{equation}
+
+Equation~\eqref{eq:massenergy} is discussed in Section~\ref{sec:science}
+on page~\pageref{sec:science}. \citet{schrodinger1926} is another paper from
+the same bib file, cited in text form.
+
+\bibliographystyle{agu}
+\bibliography{physics}
+
+\end{document}
