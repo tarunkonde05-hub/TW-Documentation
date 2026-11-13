@@ -1,0 +1,99 @@
+% Assignment 2 - Math
+% Tarun Konde (2025UCP1811)
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Assignment 2 -- Math}
+\author{Tarun Konde (2025UCP1811)}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Basics}
+
+This famous Einstein's mass-energy equation, $E = m.c^2$ should be rendered
+inline.
+
+However the following equation of motion should be rendered in a block:
+\[
+    v = u + a.t
+\]
+
+\section{Fractions \& Roots}
+
+\[
+    x_i = \frac{\sqrt{a^2 + b_i^2}}{c_i}
+\]
+
+For a cube root the optional argument of \verb|\sqrt| is used:
+$\sqrt[3]{a^3 + b^3}$.
+
+\section{Symbols \& Math-fonts}
+
+\[
+    G_{\mu\nu} + \Lambda g_{\mu\nu} = \kappa T_{\mu\nu},
+    \quad
+    \forall x \in \mathbb{R}\ \exists\, \varepsilon > 0 \Rightarrow |x| < \varepsilon
+\]
+
+\[
+    F(\theta) = \sum_{k=0}^{n} \binom{n}{k} \theta^{k} (1-\theta)^{n-k}
+\]
+
+\section{Calculus}
+
+\[
+    \frac{du}{dx} + \frac{\partial u}{\partial t}
+        = \alpha \frac{\partial^2 u}{\partial x^2}
+\]
+
+\[
+    \int_{0}^{1} \left(3x^2 + 2x + 1\right) dx
+\]
+
+\section{Multi-line equations}
+
+\subsection{Centering \& alignment}
+
+The \texttt{gather} environment centres every line:
+\begin{gather}
+    x = 5 \label{eq:x}\\
+    x + y = 3 \label{eq:xy}
+\end{gather}
+
+The \texttt{align} environment lines them up at the \texttt{=} sign:
+\begin{align}
+    x     &= 5 \\
+    x + y &= 3
+\end{align}
+
+From \eqref{eq:x} and \eqref{eq:xy}, $y = -2$.
+
+\subsection{Multiline equation}
+
+\begin{multline*}
+    (x + y + z)^3 = (x + y + z).(x + y + z).(x + y + z)
+        = x^3 + y^3 + z^3 + {} \\
+        3x^2y + 3xy^2 + 3y^2z + 3yz^2 + 3x^2z + 3xz^2 + 6xyz
+\end{multline*}
+
+\section{Matrices}
+
+\[
+    \begin{matrix} 1 & 2 \\ 3 & 4 \end{matrix}
+    \qquad
+    \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
+    \qquad
+    \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+    \qquad
+    \begin{vmatrix} 1 & 2 \\ 3 & 4 \end{vmatrix}
+\]
+
+\end{document}
