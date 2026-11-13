@@ -1,0 +1,79 @@
+% Assignment 5 (Q2) - Beamer presentation supporting the report
+% Tarun Konde (2025UCP1811)
+
+\documentclass{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\title[Introduction to \LaTeX]{Introduction to \LaTeX}
+\subtitle{Technical Writing Lab -- Assignment 5}
+\author[Tarun Konde]{Tarun Konde \\ 2025UCP1811}
+\institute[MNIT Jaipur]{Department of CSE, MNIT Jaipur}
+\date{\today}
+
+\begin{document}
+
+% title slide
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{What is \LaTeX}
+
+\begin{frame}{What is \LaTeX?}
+    \begin{itemize}
+        \item<1-> A document preparation system built on \TeX
+        \item<2-> Content is written as plain text with commands
+        \item<3-> The compiler handles layout, numbering and references
+    \end{itemize}
+
+    \only<4>{
+    \begin{block}{Compile command}
+        \texttt{pdflatex report.tex}
+    \end{block}
+    }
+\end{frame}
+
+\section{Features}
+
+\begin{frame}{Math and Structure}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \textbf{Structure}
+            \begin{itemize}
+                \item \texttt{\textbackslash chapter}, \texttt{\textbackslash section}
+                \item Automatic table of contents
+                \item Headers with \texttt{fancyhdr}
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \textbf{Math}
+            \[
+                \int_0^1 x^2\,dx = \frac{1}{3}
+            \]
+            \[
+                E = mc^2
+            \]
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}{Conclusion}
+    \begin{alertblock}{Takeaway}
+        \LaTeX{} has a learning curve, but it is the better tool for long
+        technical documents with equations and references.
+    \end{alertblock}
+
+    \vspace{0.5cm}
+    \centering
+    Thank you
+\end{frame}
+
+\end{document}

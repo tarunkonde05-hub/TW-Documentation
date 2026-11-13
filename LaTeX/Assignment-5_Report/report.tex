@@ -1,0 +1,127 @@
+% Assignment 5 (Q1) - Report
+% Tarun Konde (2025UCP1811)
+% The Beamer part (Q2) is in ../../Beamer/presentation.tex
+
+\documentclass[12pt,a4paper]{report}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{sectsty}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+
+% (c) heading styles with sectsty
+\chapterfont{\color{red}\bfseries\huge}
+\sectionfont{\color{magenta}\itshape\large}
+\subsectionfont{\color{orange}}
+
+% (d) header from the second page onwards
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Tarun Konde}
+\fancyhead[C]{Technical Writing}
+\fancyhead[R]{\today}
+\fancyfoot[C]{\thepage}
+% the report class switches chapter opening pages to "plain",
+% so plain is redefined to carry the same header
+\fancypagestyle{plain}{%
+    \fancyhf{}
+    \fancyhead[L]{Tarun Konde}
+    \fancyhead[C]{Technical Writing}
+    \fancyhead[R]{\today}
+    \fancyfoot[C]{\thepage}
+}
+
+\begin{document}
+
+% (a) title page - no header or footer here
+\begin{titlepage}
+    \thispagestyle{empty}
+    \centering
+    \vspace*{3cm}
+    {\Huge\bfseries Introduction to \LaTeX\par}
+    \vspace{2cm}
+    {\Large Tarun Konde\par}
+    \vspace{0.4cm}
+    {\large 2025UCP1811\par}
+    \vspace{2cm}
+    {\large Course: Technical Writing (22CSP210)\par}
+    \vspace{0.3cm}
+    {\large Instructor: Prof.\ Neeta Nain\par}
+    \vfill
+    {\large \today\par}
+\end{titlepage}
+
+% (b) abstract
+% The abstract environment of the report class prints on its own
+% title-style page with no header, so a starred chapter is used instead.
+\chapter*{Abstract}
+This report is a short introduction to \LaTeX{} written as part of the
+Technical Writing lab. It explains what \LaTeX{} is, how a document is
+organised, and how mathematics, tables and figures are handled. It also lists
+the problems I ran into while learning it.
+
+\chapter{Getting Started}
+
+\section{Introduction}
+
+\LaTeX{} is a document preparation system built on top of \TeX, which was
+written by Donald Knuth. The author writes plain text with markup commands, and
+the compiler produces the final PDF. The separation of content and formatting
+is the main difference from Word or Google Docs.
+
+\section{Installing the tools}
+
+I used TeX Live with TeXstudio as the editor. Overleaf works the same way in
+the browser and needs no installation.
+
+\subsection{Compiling}
+
+A document is compiled with \texttt{pdflatex}. When the document has
+references or a bibliography it has to be compiled more than once, because the
+first run only collects the labels.
+
+\chapter{Structure of a Document}
+
+\section{Preamble and body}
+
+Everything before \verb|\begin{document}| is the preamble. Packages and
+settings go there. The text goes in the body.
+
+\section{Sectioning}
+
+The \texttt{report} class has chapters, sections, subsections and
+paragraphs. Numbering and the table of contents are generated from these
+commands.
+
+\subsection{Headers and footers}
+
+The \texttt{fancyhdr} package controls headers and footers. In this report the
+title page has none, and every page after it shows my name, the course and the
+date.
+
+\chapter{Mathematics}
+
+\section{Inline and display math}
+
+Inline math is written between dollar signs, for example $a^2 + b^2 = c^2$.
+Display math gets its own line:
+\begin{equation}
+    \int_0^1 x^2\,dx = \frac{1}{3}
+\end{equation}
+
+\subsection{What I found difficult}
+
+Matching braces in long equations and remembering which package defines a
+command took the most time at first.
+
+\chapter{Conclusion}
+
+\section{Summary}
+
+\LaTeX{} takes longer to learn than a word processor, but once the basics are
+clear it saves time on long documents with equations and references.
+
+\end{document}
