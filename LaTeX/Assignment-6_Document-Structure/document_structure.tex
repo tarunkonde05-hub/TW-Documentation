@@ -1,0 +1,124 @@
+% Assignment 6 - Document Structure
+% Tarun Konde (2025UCP1811)
+%
+% Compile with XeLaTeX (needed for fontspec):
+%   xelatex document_structure
+%   bibtex document_structure
+%   makeindex document_structure
+%   xelatex document_structure
+%   xelatex document_structure
+%
+% In TeXstudio: Options > Configure TeXstudio > Build > Default Compiler > XeLaTeX
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{makeidx}
+\usepackage{url}
+
+% A. fonts
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{Courier}[Scale=MatchLowercase]
+% if Courier is not installed, TeX Gyre Cursor is the free clone:
+% \setmonofont{TeX Gyre Cursor}
+
+% A. background colour sampled from the handout
+\definecolor{handoutbg}{HTML}{FDF3E9}
+\pagecolor{handoutbg}
+
+% D. sections numbered with capital letters
+\renewcommand{\thesection}{\Alph{section}}
+
+% E. a savebox is filled once and can be reused any number of times
+\newsavebox{\notebox}
+\sbox{\notebox}{\fbox{This message is written in a savebox.}}
+
+\makeindex
+
+\title{Assignment 6 -- Document Structure}
+\author{Tarun Konde (2025UCP1811)}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Fonts and background}
+
+The page colour matches the handout\index{background}.
+
+\begin{trivlist}
+    \item \textrm{This text is written in DejaVu Serif, the main font.}
+    \item \textsf{This text is written in DejaVu Sans, the sans-serif font.}
+    \item \texttt{This text is written in Courier, the monospace font.}
+\end{trivlist}
+
+The fonts are loaded with the \texttt{fontspec} package, so this file has to be
+compiled with Xe\LaTeX{} instead of pdf\LaTeX.
+
+\section{Spacing}
+
+This is the first line of a paragraph.\\
+This is another line, but not another paragraph.
+
+\vspace{1cm}
+This paragraph starts 1cm below. Now, observe both the paragraphs given below
+and how they differ in hyphenation:
+
+> This is another paragraph. Incomprehensibilities and
+antidisestablishmentarianisms are two long words.
+
+% hyphenation switched off for this paragraph only, so the long
+% word cannot be broken and runs into the margin
+{\hyphenpenalty=10000 \exhyphenpenalty=10000
+> This is another paragraph. Incomprehensibilities and antidisestablishmentarianisms
+are two long words.\par}
+
+% C is left empty on purpose: the counter is moved forward and the
+% next section starts on a new page as D
+\newpage
+\stepcounter{section}
+
+\section{Numbering}\index{numbering}
+
+Ensure that all sections are numbered using alphabets.
+
+\begin{equation}\label{eq:ellipse}
+    \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+\end{equation}
+
+\begin{equation}\label{eq:circle}
+    x^2 + y^2 = 1
+\end{equation}
+
+Equation~\ref{eq:circle} denotes a circle. Equation~\ref{eq:ellipse}, the
+ellipse, was added before it, and both numbers updated on their own because
+they come from labels.
+
+\section{Boxes and Lines}
+
+\noindent\usebox{\notebox}\index{savebox}
+
+\noindent\usebox{\notebox}
+
+\noindent\usebox{\notebox}
+
+\vspace{0.5cm}
+\noindent\fbox{\parbox{5cm}{This message is wrapped in a 5cm paragraph box.}}\index{parbox}
+
+\vspace{0.3cm}
+\noindent\rule{\linewidth}{0.4pt}
+
+Note that these boxes are used for highlighting and layout design. The index
+at the end lists a few terms from this document. Bibliography handling with
+Bib\TeX{} is described by Overleaf \cite{overleafbib}, and the standard
+beginner reference is \cite{oetiker2021}.
+
+\printindex
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
