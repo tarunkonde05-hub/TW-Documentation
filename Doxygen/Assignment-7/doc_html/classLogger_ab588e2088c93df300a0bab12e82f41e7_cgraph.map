@@ -1,0 +1,5 @@
+<map id="Logger::log" name="Logger::log">
+<area shape="rect" id="Node000001" title="Prints a message if its level is at least the minimum level." alt="" coords="5,5,100,31"/>
+<area shape="rect" id="Node000002" href="$classLogger.html#af43c8bd0e031fc5e5ee135ece8937492" title="Converts a level to the tag printed in the output." alt="" coords="148,5,273,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,15,134,15,134,21,100,21"/>
+</map>

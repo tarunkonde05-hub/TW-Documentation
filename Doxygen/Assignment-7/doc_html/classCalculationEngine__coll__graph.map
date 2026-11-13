@@ -1,0 +1,5 @@
+<map id="CalculationEngine" name="CalculationEngine">
+<area shape="rect" id="Node000001" title="Performs mathematical operations and logs each step." alt="" coords="5,93,144,119"/>
+<area shape="rect" id="Node000002" href="$classLogger.html" title="Prints prefixed, level&#45;tagged messages to the console." alt="" coords="41,5,108,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,45,77,93,72,93,72,45"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Logger.h" name="Logger.h">
+<area shape="rect" id="Node000001" title="Logging levels and a small console logger." alt="" coords="42,5,119,31"/>
+<area shape="rect" id="Node000002" href="$CalculationEngine_8h.html" title="Declares the CalculationEngine class." alt="" coords="5,79,156,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,44,83,79,78,79,78,44"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Entry point. Uses CalculationEngine to compute a few powers." alt="" coords="39,152,122,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="83,118,83,152,78,152,78,118"/>
+</map>

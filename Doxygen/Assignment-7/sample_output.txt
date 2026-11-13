@@ -1,0 +1,10 @@
+[CalcEngine] [INFO] power_calculation(2.000000, 8.000000)
+[CalcEngine] [INFO] result = 256.000000
+[CalcEngine] [INFO] power_calculation(9.000000, 0.500000)
+[CalcEngine] [INFO] result = 3.000000
+[CalcEngine] [INFO] power_calculation(0.000000, -1.000000)
+[CalcEngine] [ERROR] 0 raised to a negative power (division by zero)
+
+2^8   = 256
+9^0.5 = 3
+0^-1  = inf
